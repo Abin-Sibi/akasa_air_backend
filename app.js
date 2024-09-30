@@ -17,7 +17,11 @@ const app = express();
 connect();
 
 
-app.use(cors({ origin: 'https://akasa-air-frontend-orcin.vercel.app' }))
+app.use(cors({
+    origin: 'https://akasa-air-frontend-orcin.vercel.app', // Your Vercel frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true // Enable sending cookies and authentication headers
+  }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
