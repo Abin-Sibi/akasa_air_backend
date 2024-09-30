@@ -17,7 +17,7 @@ const app = express();
 connect();
 
 
-app.use(cors({origin:true}))
+app.use(cors({ origin: 'https://akasa-air-frontend-orcin.vercel.app' }))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
